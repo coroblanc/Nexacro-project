@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="MainForm" width="860" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="860">
+        <Static id="Static00" taborder="0" text="고객 정보 관리" left="21" top="18" width="829" height="59" background="aquamarine" color="blueviolet" font="bold 28px/normal &quot;Malgun Gothic&quot;"/>
+        <Grid id="Grid00" taborder="1" left="20" top="83" width="456" height="277" binddataset="ds_member">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="114"/>
+                <Column size="114"/>
+                <Column size="114"/>
+                <Column size="114"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="아이디"/>
+                <Cell col="1" text="고객이름"/>
+                <Cell col="2" text="비밀번호"/>
+                <Cell col="3" text="전자메일"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MID"/>
+                <Cell col="1" text="bind:MNAME"/>
+                <Cell col="2" text="bind:PWD"/>
+                <Cell col="3" text="bind:EMAIL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static01" taborder="2" text="아이디" left="485" top="87" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+        <Static id="Static01_00" taborder="3" text="고객이름" left="485" top="150" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;" onclick="Static01_00_onclick"/>
+        <Static id="Static01_01" taborder="4" text="비밀번호" left="486" top="220" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;" onclick="Static01_01_onclick"/>
+        <Static id="Static01_02" taborder="5" text="이메일" left="486" top="290" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="Edit00" taborder="6" left="485" top="110" width="359" height="33" onchanged="Edit00_onchanged" maxlength="10"/>
+        <Edit id="Edit00_00" taborder="7" left="485" top="180" width="359" height="33" onchanged="Edit00_onchanged" maxlength="30"/>
+        <Edit id="Edit00_00_00" taborder="8" left="485" top="247" width="359" height="33" onchanged="Edit00_onchanged" maxlength="30" password="true"/>
+        <Edit id="Edit00_00_00_00" taborder="9" left="485" top="317" width="359" height="33" onchanged="Edit00_onchanged" maxlength="50"/>
+        <Button id="btnInsert" taborder="10" text="입력" left="740" top="34" width="86" height="26" onclick="btnInsert_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_member">
+        <ColumnInfo>
+          <Column id="MID" type="STRING" size="10"/>
+          <Column id="MNAME" type="STRING" size="30"/>
+          <Column id="PWD" type="STRING" size="30"/>
+          <Column id="EMAIL" type="STRING" size="50"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMAIL">1000@ez.edu</Col>
+            <Col id="MNAME">홍길동</Col>
+            <Col id="MID">1000</Col>
+            <Col id="PWD">1000</Col>
+          </Row>
+          <Row>
+            <Col id="EMAIL">2000@ez.edu</Col>
+            <Col id="MNAME">전우치</Col>
+            <Col id="MID">2000</Col>
+            <Col id="PWD">2000</Col>
+          </Row>
+          <Row>
+            <Col id="EMAIL">3000@ez.edu</Col>
+            <Col id="MNAME">임꺽정</Col>
+            <Col id="MID">3000</Col>
+            <Col id="PWD">3000</Col>
+          </Row>
+          <Row>
+            <Col id="MID">4000</Col>
+            <Col id="MNAME">사오정</Col>
+            <Col id="PWD">4000</Col>
+            <Col id="EMAIL">4000@ez.edu</Col>
+          </Row>
+          <Row>
+            <Col id="MID">5000</Col>
+            <Col id="MNAME">오징어</Col>
+            <Col id="EMAIL">5000@ez.edu</Col>
+            <Col id="PWD">5000</Col>
+          </Row>
+          <Row>
+            <Col id="MID">5100</Col>
+            <Col id="MNAME">꼴뚜기</Col>
+            <Col id="EMAIL">5100@ez.edu</Col>
+            <Col id="PWD">5100</Col>
+          </Row>
+          <Row>
+            <Col id="MID">6000</Col>
+            <Col id="MNAME">육각형</Col>
+            <Col id="EMAIL">6000@ez.edu</Col>
+            <Col id="PWD">6000</Col>
+          </Row>
+          <Row>
+            <Col id="MID">6210</Col>
+            <Col id="MNAME">육삼냉면</Col>
+            <Col id="EMAIL">6210@ez.edu</Col>
+            <Col id="PWD">6210</Col>
+          </Row>
+          <Row>
+            <Col id="MID">7000</Col>
+            <Col id="MNAME">칠면조</Col>
+            <Col id="EMAIL">7000@ez.edu</Col>
+            <Col id="PWD">7000</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Static01_00_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Static01_01_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Edit00_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+
+this.btnInsert_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var row = this.ds_member.addRow();
+	trace("[insert]row=" +row);
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="ds_member" columnid="MID"/>
+      <BindItem id="item1" compid="Edit00_00" propid="value" datasetid="ds_member" columnid="MNAME"/>
+      <BindItem id="item2" compid="Edit00_00_00" propid="value" datasetid="ds_member" columnid="PWD"/>
+      <BindItem id="item3" compid="Edit00_00_00_00" propid="value" datasetid="ds_member" columnid="EMAIL"/>
+    </Bind>
+  </Form>
+</FDL>
