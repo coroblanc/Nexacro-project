@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Members2" width="860" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="860">
+        <Static id="Static00" taborder="0" text="고객 정보 관리" left="21" top="18" width="829" height="59" background="aquamarine" color="blueviolet" font="bold 28px/normal &quot;Malgun Gothic&quot;"/>
+        <Grid id="Grid00" taborder="1" left="20" top="83" width="456" height="337" binddataset="ds_member">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="84"/>
+                <Column size="84"/>
+                <Column size="84"/>
+                <Column size="117"/>
+                <Column size="86"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="선택"/>
+                <Cell col="1" text="아이디"/>
+                <Cell col="2" text="이름"/>
+                <Cell col="3" text="비밀번호"/>
+                <Cell col="4" text="전자메일"/>
+                <Cell col="5" text="성별"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CHECK" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="1" text="bind:MID"/>
+                <Cell col="2" text="bind:MNAME"/>
+                <Cell col="3" text="bind:PWD"/>
+                <Cell col="4" text="bind:EMAIL"/>
+                <Cell col="5" text="bind:GENDER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static01" taborder="2" text="아이디" left="485" top="87" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+        <Static id="Static01_00" taborder="3" text="고객이름" left="485" top="150" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;" onclick="Static01_00_onclick"/>
+        <Static id="Static01_01" taborder="4" text="비밀번호" left="486" top="220" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;" onclick="Static01_01_onclick"/>
+        <Static id="Static01_02" taborder="5" text="이메일" left="486" top="290" width="365" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="Edit00" taborder="6" left="485" top="110" width="359" height="33" onchanged="Edit00_onchanged" maxlength="10"/>
+        <Edit id="Edit00_00" taborder="7" left="485" top="180" width="359" height="33" onchanged="Edit00_onchanged" maxlength="30"/>
+        <Edit id="Edit00_00_00" taborder="8" left="485" top="247" width="359" height="33" onchanged="Edit00_onchanged" maxlength="30" password="true"/>
+        <Edit id="Edit00_00_00_00" taborder="9" left="485" top="317" width="359" height="33" onchanged="Edit00_onchanged" maxlength="50"/>
+        <Button id="btnInsert" taborder="10" text="입력" left="547" top="34" width="86" height="26" onclick="btnInsert_onclick"/>
+        <Static id="Static01_02_00" taborder="11" text="성별" left="485" top="360" width="179" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+        <Combo id="cbGender" taborder="12" left="486" top="387" width="178" height="33" text="성별" value="" index="-1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">남자</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">여자</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Combo id="cbGender00" taborder="13" left="670" top="387" width="178" height="33" text="성별" value="" index="-1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">male</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">female</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Static id="cbGenderR" taborder="14" text="sex" left="667" top="360" width="187" height="20" background="cornsilk" color="black" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+        <Button id="btnDelete" taborder="15" text="삭제" left="647" top="34" width="86" height="26" onclick="btnDelete_onclick"/>
+        <Button id="btnSave" taborder="16" text="저장" left="744" top="34" width="86" height="26" onclick="btnsave_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_member">
+        <ColumnInfo>
+          <Column id="MID" type="STRING" size="10"/>
+          <Column id="MNAME" type="STRING" size="30"/>
+          <Column id="PWD" type="STRING" size="30"/>
+          <Column id="EMAIL" type="STRING" size="50"/>
+          <Column id="GENDER" type="INT" size="1"/>
+          <Column id="CHECK" type="INT" size="1"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMAIL">1000@ez.edu</Col>
+            <Col id="MNAME">홍길동</Col>
+            <Col id="MID">1000</Col>
+            <Col id="PWD">1000</Col>
+            <Col id="GENDER">1</Col>
+          </Row>
+          <Row>
+            <Col id="EMAIL">2000@ez.edu</Col>
+            <Col id="MNAME">전우치</Col>
+            <Col id="MID">2000</Col>
+            <Col id="PWD">2000</Col>
+            <Col id="GENDER">1</Col>
+          </Row>
+          <Row>
+            <Col id="EMAIL">3000@ez.edu</Col>
+            <Col id="MNAME">임꺽정</Col>
+            <Col id="MID">3000</Col>
+            <Col id="PWD">3000</Col>
+            <Col id="GENDER">1</Col>
+          </Row>
+          <Row>
+            <Col id="MID">4000</Col>
+            <Col id="MNAME">사오정</Col>
+            <Col id="PWD">4000</Col>
+            <Col id="EMAIL">4000@ez.edu</Col>
+            <Col id="GENDER">1</Col>
+          </Row>
+          <Row>
+            <Col id="MID">5000</Col>
+            <Col id="MNAME">오미자</Col>
+            <Col id="EMAIL">5000@ez.edu</Col>
+            <Col id="PWD">5000</Col>
+            <Col id="GENDER">2</Col>
+          </Row>
+          <Row>
+            <Col id="MID">5100</Col>
+            <Col id="MNAME">오수자</Col>
+            <Col id="EMAIL">5100@ez.edu</Col>
+            <Col id="PWD">5100</Col>
+            <Col id="GENDER">2</Col>
+          </Row>
+          <Row>
+            <Col id="MID">6000</Col>
+            <Col id="MNAME">육각형</Col>
+            <Col id="EMAIL">6000@ez.edu</Col>
+            <Col id="PWD">6000</Col>
+            <Col id="GENDER">1</Col>
+          </Row>
+          <Row>
+            <Col id="MID">6210</Col>
+            <Col id="MNAME">김사랑</Col>
+            <Col id="EMAIL">6210@ez.edu</Col>
+            <Col id="PWD">6210</Col>
+            <Col id="GENDER">2</Col>
+          </Row>
+          <Row>
+            <Col id="MID">7000</Col>
+            <Col id="MNAME">오미인</Col>
+            <Col id="EMAIL">7000@ez.edu</Col>
+            <Col id="PWD">7000</Col>
+            <Col id="GENDER">2</Col>
+          </Row>
+          <Row>
+            <Col id="MID">8000</Col>
+            <Col id="MNAME">박보영</Col>
+            <Col id="PWD">8000</Col>
+            <Col id="EMAIL">8000@ez.edu</Col>
+            <Col id="GENDER">2</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Static01_00_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Static01_01_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Edit00_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+
+this.btnInsert_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var row = this.ds_member.addRow();
+	trace("[insert]row=" +row);
+};
+
+this.btnDelete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+		for(var row = 0; row < this.ds_member.getRowCount();){
+			var check = this.ds_member.getColumn(row, "CHECK");
+			trace("DEL : count=" + this.ds_member.getRowCount() + ", row=" + row + ", check=" + check);
+			if(check !== undefined && check !== null && check ==1) {
+				this.ds_member.deleteRow(row);
+			}
+			else{
+			row++;
+			}
+		}
+};
+
+//저장
+this.btnSave_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	 var svcid = "members";  
+     var url = "http://localhost:8088/HelloMx/Services/membersvc.jsp";
+     var reqDs = "member=ds_member:U"; // U(Update), 갱신된 정보만 전송
+     var respDs = "";
+     var args = "";
+     var callback = "CallbackFunc";
+    
+     this.transaction(svcid, url, reqDs, respDs, args, callback); 
+};
+
+this.CallbackFunc = function(svcid, code, message)
+{
+	trace("[" + svcid + "]");
+     if (code == 0) {
+          this.alert(this.ds_member.rowcount + " numbers of data have been found.");
+          trace(this.ds_member.rowcount + " numbers of data have been found.");
+     } else {
+          this.alert("Error["+code+"]:"+message);
+          trace("Error["+code+"]:"+message);
+     }
+}
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="ds_member" columnid="MID"/>
+      <BindItem id="item1" compid="Edit00_00" propid="value" datasetid="ds_member" columnid="MNAME"/>
+      <BindItem id="item2" compid="Edit00_00_00" propid="value" datasetid="ds_member" columnid="PWD"/>
+      <BindItem id="item3" compid="Edit00_00_00_00" propid="value" datasetid="ds_member" columnid="EMAIL"/>
+      <BindItem id="item4" compid="cbGender" propid="value" datasetid="ds_member" columnid="GENDER"/>
+      <BindItem id="item5" compid="cbGender00" propid="value" datasetid="ds_member" columnid="GENDER"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="MainForm" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="st" taborder="0" text="고객 관리 시스템" left="0.63%" top="1.39%" width="89.22%" height="8.89%" textAlign="center" font="bold 28px/normal &quot;Malgun Gothic&quot;" background="aqua" color="navy" boxShadow="10px 10px 0px 0px aliceblue"/>
+        <Div id="div_left_menu" taborder="1" left="0.63%" top="12.5%" width="15.63%" height="60.56%" text="" url="Base::LeftForm.xfdl"/>
+        <Div id="div_workspace" taborder="2" left="16.41%" top="12.50%" width="74.22%" height="60.56%" background="aliceblue"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

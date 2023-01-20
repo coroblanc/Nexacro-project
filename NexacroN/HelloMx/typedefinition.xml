@@ -41,6 +41,8 @@
     <Service prefixid="font" type="resource" url="./_resource_/_font_/" version="0" cachelevel="session" include_subdir="false"/>
     <Service prefixid="Base" type="form" url="./Base/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
     <Service prefixid="FrameBase" type="form" url="./FrameBase/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
+    <Service prefixid="JPSvc" type="JSP" version="0" cachelevel="session" include_subdir="false" communicationversion="0" url="http://localhost:8088/HelloMx/Services/"/>
+    <Service prefixid="MXSvc" type="JSP" version="0" cachelevel="session" include_subdir="false" communicationversion="0" url="http://localhost:8088/HelloMx/MXServices/"/>
   </Services>
   <Protocols/>
   <DeviceAdaptors/>

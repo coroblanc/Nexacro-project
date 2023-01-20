@@ -3,7 +3,7 @@
   <Application id="Application_Desktop" screenid="Desktop_screen">
     <Layout>
       <MainFrame id="mainframe" showtitlebar="true" showstatusbar="true" left="0" top="0" width="1280" height="720" titletext="넥사트로 메인폼">
-        <ChildFrame id="WorkFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::customer.xfdl"/>
+        <ChildFrame id="WorkFrame" showtitlebar="false" showstatusbar="false" formurl="Base::MainForm.xfdl"/>
       </MainFrame>
     </Layout>
   </Application>
